@@ -17,7 +17,7 @@ module Types
     field :items, [Types::ItemType], null: false, description: "Returns a list of items in the martian library"
 
     def items
-      Item.all
+      Item.includes(:user)
     end
   end
 end
